@@ -46,11 +46,13 @@ void cc4piMultiPiNumu(){
 
     // TString variable = "costheta";
     TString variable = "pmu";
-    TString path_to_input = "/sps/t2k/quocviet/data/hl2_3.4.1_output/numuCC4piMultiPiAnalysis/prod7_V12_neut_D_2015-08-water_magnet_run8_accum2/";
+    // TString path_to_input = "/eos/home-q/qunguyen/highland_3.4.1_output/numuCC4piMultiPiAnalysis/prod7_V12_neut_D_2015-08-water_magnet_run8_accum2/";
+    TString path_to_input = "";
  
     std::map<TString, TString> input_file;
  
-    input_file["numuFHC"]="merge_run8_water.root";
+    // input_file["numuFHC"]="merge_run8_water.root";
+    input_file["numuFHC"]="test_4pi.root";
     
     // input_file["anumuRHC"]="antiNumuCCMultiPi_accum2_test.root";
     // input_file["numuBkgRHC"]="numuBkgInAntiNu_1core.root";
