@@ -13,12 +13,11 @@ void ccOuterDetector(){
     // TString variable = "costheta";
     TString variable = "pmu";
 
-    TString path_to_data_input = "/sps/t2k/quocviet/data/hl2_3.4.1_output/numuCCOuterDetAnalysis/data_parallel/final_merge_output/";
-    TString input_data_file ="run8_water_FHC_period17.root";
+    TString path_to_data_input = "/eos/home-q/qunguyen/highland_3.11_output/numuCCOuterDetector_V12/data/run6bcde_air_RHC/";
+    TString input_data_file ="merge_run6_RHC.root";
     
-    TString path_to_MC_input = "/sps/t2k/quocviet/data/hl2_3.4.1_output/numuCCOuterDetAnalysis/MC/";
-    // TString input_MC_file ="merge_run8_water.root";
-    TString input_MC_file ="merge_run4_air.root";
+    TString path_to_MC_input = "/eos/home-q/qunguyen/highland_3.11_output/numuCCOuterDetector_V12/MC/merge_file/";
+    TString input_MC_file ="run6_air_RHC_period_9_10_11_12.root";
     
 
     char full_data_file_name[256];
@@ -38,11 +37,12 @@ void ccOuterDetector(){
 
     TCanvas *c1 = new TCanvas("c1","c1", 800,600);
 
-    // draw.Draw(data, mc, "HMN_mom", 100, 0, 5000, "particle", " accum_level[0]>3");//kNumuCCOuterDet[0][0]>6 &&
-    // c1->Print("SMRD_pmu_nu.pdf");
+    // draw.Draw(data, mc, "HMN_mom", 25, 0, 5000, "particle", " accum_level[0]>3");//kNumuCCOuterDet[0][0]>6 &&
+    draw.Draw(mc, data, "HMN_mom", 100, 0, 5000, "particle", " accum_level[0]>3");//kNumuCCOuterDet[0][0]>6 &&
+    c1->Print("SMRD_pmu_nu.pdf");
 
-    draw.Draw(data, mc, "HMN_costheta", 100, -1, 1, "particle", " accum_level[0]>3");//kNumuCCOuterDet[0][0]>6 &&
-    c1->Print("SMRD_costheta_nu.pdf");
+    // draw.Draw(data, mc, "HMN_costheta", 100, -1, 1, "particle", " accum_level[0]>3");//kNumuCCOuterDet[0][0]>6 &&
+    // c1->Print("SMRD_costheta_nu.pdf");
 /*
     SampleGroup run8("run8");
     run8.AddMCSample("magnet",mc);  

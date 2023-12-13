@@ -1,12 +1,14 @@
 #!/bin/bash
 
 # Define the input .dat file; we can add more file
-input_file1="/sps/t2k/quocviet/data/hl2_3.4.1_output/numuCCOuterDetAnalysis/data_parallel/file_list_12/run_period_17_list.dat"
-input_file2="/sps/t2k/quocviet/data/hl2_3.4.1_output/numuCCOuterDetAnalysis/data_parallel/file_list_13/run_period_17_list.dat"
+input_file1="/eos/home-q/qunguyen/highland_3.11_output/numuCCOuterDetector_V12/MC/data_split_00011000/run_period_9_list.dat"
+input_file2="/eos/home-q/qunguyen/highland_3.11_output/numuCCOuterDetector_V12/MC/data_split_00011000/run_period_10_list.dat"
+input_file2="/eos/home-q/qunguyen/highland_3.11_output/numuCCOuterDetector_V12/MC/data_split_00011000/run_period_11_list.dat"
+input_file2="/eos/home-q/qunguyen/highland_3.11_output/numuCCOuterDetector_V12/MC/data_split_00011000/run_period_12_list.dat"
 
 
 # Define the output merged file
-output_file="/sps/t2k/quocviet/data/hl2_3.4.1_output/numuCCOuterDetAnalysis/data_parallel/final_merge_output/run8_water_FHC_period17.root"
+output_file="/eos/home-q/qunguyen/highland_3.11_output/numuCCOuterDetector_V12/MC/merge_file/run6_air_RHC_period_9_10_11_12.root"
 
 # Function to merge files from a list
 function merge_files_from_list {
@@ -36,8 +38,8 @@ function merge_files_from_list {
   fi
 }
 
-# Merge files from the first .dat file
+# Merge files from the .dat files
 merge_files_from_list "$input_file1" "$output_file"
-
-# Merge files from the second .dat file
 merge_files_from_list "$input_file2" "$output_file"
+merge_files_from_list "$input_file3" "$output_file"
+merge_files_from_list "$input_file4" "$output_file"
