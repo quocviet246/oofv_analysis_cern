@@ -2,18 +2,6 @@ import os
 import multiprocessing
 
 # Set the directory path where your files are located
-# data_general_path = '/eos/experiment/neutplatform/t2knd280/ND280AnalysisFiles/nd280/oaanalysis/data/production7/'
-
-#Run6 RHC MC
-# data_general_path = '/eos/experiment/neutplatform/t2knd280/ND280AnalysisFiles/nd280/oaanalysis/neut/production7/V12/anti_nu/run6air/'
-#Run 8 water FHC MC
-data_general_path = '/eos/experiment/neutplatform/t2knd280/ND280AnalysisFiles/nd280/oaanalysis/neut/production7/V12/nu/run8water/'
-
-input_directory_path = data_general_path #+ 'V12/unsorted/00012000_00012999/'
-# input_directory_path = data_gimport os
-import multiprocessing
-
-# Set the directory path where your files are located
 
 # input_directory_path = '/eos/experiment/neutplatform/t2knd280/ND280AnalysisFiles/nd280/oaanalysis/neut/production7/V12/anti_nu/run6air/'
 # output_directory_path = '/eos/home-q/qunguyen/highland_3.11_output/antiNumuCCAnalysis/run6air/'
