@@ -1,20 +1,19 @@
 import os
 import multiprocessing
-#aaa
+
 # Set the directory path where your files are located
 
 # input_directory_path = '/eos/experiment/neutplatform/t2knd280/ND280AnalysisFiles/nd280/oaanalysis/neut/production7/V12/anti_nu/run6air/'
 # output_directory_path = '/eos/home-q/qunguyen/highland_3.11_output/antiNumuCCAnalysis/run6air/'
 
 # 12/01/2024
-input_directory_path = '/eos/experiment/neutplatform/t2knd280/ND280AnalysisFiles/nd280/oaanalysis/neut/production7/V12/nu/run8water'
-output_directory_path = '/eos/home-q/qunguyen/highland_3.11_V12_output/numuCC4PiMultiPi/run8water'
+input_directory_path = '/eos/experiment/neutplatform/t2knd280/ND280AnalysisFiles/nd280/oaanalysis/neut/production7/V12/nu/run8water/'
+output_directory_path = '/eos/home-q/qunguyen/highland_3.11_V12_output/numuCC4PiMultiPi/run8water/'
 
 # Runpackage = 'RunNumuCCOuterDetAnalysis.exe'
 # Runpackage = 'RunAntiNumuCCAnalysis.exe'
 # Runpackage = 'RunNumuCCMultiPiAnalysis.exe'
 Runpackage = 'RunNumuCC4piMultiPiAnalysis.exe'
-
 
 # Define the number of cores to use
 num_cores = 20
