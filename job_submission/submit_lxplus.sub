@@ -1,18 +1,18 @@
-notification            = Never
-universe                = vanilla
+# notification            = Never
+# universe                = vanilla
 executable              = /afs/cern.ch/work/q/qunguyen/public/oofv_analysis_cern/job_submission/submit_hadd_lxplus.sh
 output                  = $(ClusterId).$(ProcId).out
 error                   = $(ClusterId).$(ProcId).error
 log                     = $(ClusterId).$(ProcId).log
-getenv                  = True
-should_transfer_files   = NO
-initialdir              = /afs/cern.ch/work/q/qunguyen/public/oofv_analysis_cern/job_submission/
+# getenv                  = True
+# should_transfer_files   = NO
+# initialdir              = /afs/cern.ch/work/q/qunguyen/public/oofv_analysis_cern/job_submission/
 requirements            = (OpSysAndVer =?= "CentOS7")
-priority                = 20
+# priority                = 20
 # espresso = 20 minutes, microcentury = 1 hour, longlunch  = 2 hours, workday  = 8 hours
 # tomorrow = 1 day, testmatch = 3 days, nextweek = 1 week
 request_cpus            = 1
 request_memory          = 15 GB
 request_disk            = 15 GB
 +JobFlavour             = "workday"
-queue arguments from FileList.txt
+# queue arguments from FileList.txt
