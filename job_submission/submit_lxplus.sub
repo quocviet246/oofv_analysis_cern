@@ -1,6 +1,7 @@
 # notification            = Never
 # universe                = vanilla
 executable              = /afs/cern.ch/work/q/qunguyen/public/oofv_analysis_cern/job_submission/submit_hadd_lxplus.sh
+arguments               = $(ClusterId) $(ProcId)
 output                  = $(ClusterId).$(ProcId).out
 error                   = $(ClusterId).$(ProcId).error
 log                     = $(ClusterId).$(ProcId).log
@@ -15,4 +16,4 @@ request_cpus            = 1
 request_memory          = 15 GB
 request_disk            = 15 GB
 +JobFlavour             = "workday"
-queue arguments from FileList.txt
+queue
