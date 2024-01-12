@@ -15,4 +15,4 @@ request_cpus            = 1
 request_memory          = 15 GB
 request_disk            = 15 GB
 +JobFlavour             = "workday"
-# queue arguments from FileList.txt
+queue arguments from FileList.txt
