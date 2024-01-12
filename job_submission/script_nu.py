@@ -5,21 +5,29 @@ import multiprocessing
 # data_general_path = '/eos/experiment/neutplatform/t2knd280/ND280AnalysisFiles/nd280/oaanalysis/data/production7/'
 
 #Run6 RHC MC
-data_general_path = '/eos/experiment/neutplatform/t2knd280/ND280AnalysisFiles/nd280/oaanalysis/neut/production7/V12/anti_nu/run6air/'
+# data_general_path = '/eos/experiment/neutplatform/t2knd280/ND280AnalysisFiles/nd280/oaanalysis/neut/production7/V12/anti_nu/run6air/'
+#Run 8 water FHC MC
+data_general_path = '/eos/experiment/neutplatform/t2knd280/ND280AnalysisFiles/nd280/oaanalysis/neut/production7/V12/nu/run8water/'
+
 input_directory_path = data_general_path #+ 'V12/unsorted/00012000_00012999/'
-# input_directory_path = data_general_path+ 'run6e_air_RHC/'
+# input_directory_path = data_gimport os
+import multiprocessing
+
+# Set the directory path where your files are located
+
+# input_directory_path = '/eos/experiment/neutplatform/t2knd280/ND280AnalysisFiles/nd280/oaanalysis/neut/production7/V12/anti_nu/run6air/'
+# output_directory_path = '/eos/home-q/qunguyen/highland_3.11_output/antiNumuCCAnalysis/run6air/'
+
+# 12/01/2024
+input_directory_path = '/eos/experiment/neutplatform/t2knd280/ND280AnalysisFiles/nd280/oaanalysis/neut/production7/V12/nu/run8water'
+output_directory_path = '/eos/home-q/qunguyen/highland_3.11_V12_output/numuCC4PiMultiPi/run8water'
 
 # Runpackage = 'RunNumuCCOuterDetAnalysis.exe'
-Runpackage = 'RunAntiNumuCCAnalysis.exe'
+# Runpackage = 'RunAntiNumuCCAnalysis.exe'
 # Runpackage = 'RunNumuCCMultiPiAnalysis.exe'
-# Runpackage = 'RunNumuCC4piMultiPiAnalysis.exe'
+Runpackage = 'RunNumuCC4piMultiPiAnalysis.exe'
 
 
-# output_directory_path = '/eos/home-q/qunguyen/highland_3.11_output/numuCCOuterDetector_V12/MC_update/run6air_RHC/'
-
-output_directory_path = '/eos/home-q/qunguyen/highland_3.11_output/antiNumuCCAnalysis/run6air/'
-
-# output_directory_path = '/eos/home-q/qunguyen/highland_3.11_output/numuCCOuterDetector_V12/data/run6bcde_air_RHC/'
 # Define the number of cores to use
 num_cores = 20
 
@@ -34,8 +42,8 @@ def run_executable(file_name):
 
 # Create a list of file names in the directory and sort them alphabetically
 # file_list = sorted(os.listdir(input_directory_path))
-# file_list = sorted(os.listdir(input_directory_path))[:10]  # Include only the first 100 files
-file_list = sorted(os.listdir(input_directory_path)) # Include all files
+file_list = sorted(os.listdir(input_directory_path))[:10]  # Include only the first 100 files
+# file_list = sorted(os.listdir(input_directory_path)) # Include all files
 
 # Create a pool of workers
 pool = multiprocessing.Pool(num_cores)
