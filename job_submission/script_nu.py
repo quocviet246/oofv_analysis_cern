@@ -32,8 +32,8 @@ def run_executable(file_name):
 
 # Create a list of file names in the directory and sort them alphabetically
 # file_list = sorted(os.listdir(input_directory_path))
-file_list = sorted(os.listdir(input_directory_path))[:10]  # Include only the first 100 files
-# file_list = sorted(os.listdir(input_directory_path)) # Include all files
+# file_list = sorted(os.listdir(input_directory_path))[:10]  # Include only the first 100 files
+file_list = sorted(os.listdir(input_directory_path)) # Include all files
 
 # Create a pool of workers
 pool = multiprocessing.Pool(num_cores)
