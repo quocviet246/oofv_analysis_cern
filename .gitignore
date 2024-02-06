@@ -4,3 +4,4 @@ plotPDFs/*/*
 plotPDFs/cc4pi/CCPhoton.pdf
 plotPDFs/cc4pi/CCPhoton.pdf
 macros/*.pdf
+test/*

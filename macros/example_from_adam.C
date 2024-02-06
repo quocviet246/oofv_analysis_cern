@@ -39,29 +39,29 @@ void plotMomCos(Experiment exp, const char * accum_levels[], const char * sample
 		for(int i = 0; i<2; i++){ // loop over mom,cos
 			for(int k = 0; k<12; k++){ // loop over samples
 	
-	if(j==0){ //Distributions
-	if(i==0){ //Momentum
-		draw->SetLegendPos("tr");
-		draw->SetTitleX("Reconstructed p_{#mu} [MeV/c]");
-		draw->SetTitleY("Events");
-		draw->SetTitle(Form("%s_%s_%s_%s",FGDs[f-1],sample_names[k],variables[i],categories[j]));
-		
-		draw->Draw(exp,"all","magnet","selmu_mom",50,0,5000,"topology",Form("accum_level[0]%s",accum_levels[k]),"","OVER NOAUTOLABELS");
-		//hist = (TH1D*)draw->GetLastHisto();
-		//hist -> SetTitle("title");
-		}
-	if(i==1){ //cos(theta)
-		draw->SetLegendPos("tl");
-		draw->SetTitleX("Reconstructed cos#theta_{#mu}");
-		draw->SetTitleY("Events");
-		draw->SetTitle(Form("%s_%s_%s_%s",FGDs[f-1],sample_names[k],variables[i],categories[j]));
-		
-		draw->Draw(exp,"all","magnet","selmu_costheta",50, -1, 1,"topology",Form("accum_level[0]%s",accum_levels[k]),"","UNDER NOAUTOLABELS");
-		//hist = (TH1D*)draw->GetLastHisto();
-		//hist -> SetTitle("title");
-		}
-	}
-		canvas->SaveAs(Form("Plots/%s_%s_%s_%s.pdf",FGDs[f-1],sample_names[k],variables[i],categories[j]));
+				if(j==0){ //Distributions
+				if(i==0){ //Momentum
+					draw->SetLegendPos("tr");
+					draw->SetTitleX("Reconstructed p_{#mu} [MeV/c]");
+					draw->SetTitleY("Events");
+					draw->SetTitle(Form("%s_%s_%s_%s",FGDs[f-1],sample_names[k],variables[i],categories[j]));
+					
+					draw->Draw(exp,"all","magnet","selmu_mom",50,0,5000,"topology",Form("accum_level[0]%s",accum_levels[k]),"","OVER NOAUTOLABELS");
+					//hist = (TH1D*)draw->GetLastHisto();
+					//hist -> SetTitle("title");
+					}
+				if(i==1){ //cos(theta)
+					draw->SetLegendPos("tl");
+					draw->SetTitleX("Reconstructed cos#theta_{#mu}");
+					draw->SetTitleY("Events");
+					draw->SetTitle(Form("%s_%s_%s_%s",FGDs[f-1],sample_names[k],variables[i],categories[j]));
+					
+					draw->Draw(exp,"all","magnet","selmu_costheta",50, -1, 1,"topology",Form("accum_level[0]%s",accum_levels[k]),"","UNDER NOAUTOLABELS");
+					//hist = (TH1D*)draw->GetLastHisto();
+					//hist -> SetTitle("title");
+					}
+				}
+					canvas->SaveAs(Form("Plots/%s_%s_%s_%s.pdf",FGDs[f-1],sample_names[k],variables[i],categories[j]));
 			}
 		}
 	}
