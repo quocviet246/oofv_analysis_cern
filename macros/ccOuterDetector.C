@@ -13,12 +13,21 @@ void ccOuterDetector(){
     // TString variable = "costheta";
     TString variable = "pmu";
 
-    TString path_to_data_input = "/eos/home-q/qunguyen/highland_3.11_output/numuCCOuterDetector_V12/data/run6bcde_air_RHC/";
-    TString input_data_file ="merge_run6_RHC.root";
+    // files for prod7_V12
+    // TString path_to_data_input = "/eos/home-q/qunguyen/highland_3.11_output/numuCCOuterDetector_V12/data/run6bcde_air_RHC/";
+    // TString input_data_file ="merge_run6_RHC.root";
     
-    TString path_to_MC_input = "/eos/home-q/qunguyen/highland_3.11_output/numuCCOuterDetector_V12/MC/";
-    TString input_MC_file ="merge_run6air_RHC.root";
+    // TString path_to_MC_input = "/eos/home-q/qunguyen/highland_3.11_output/numuCCOuterDetector_V12/MC/";
+    // TString input_MC_file ="merge_run6air_RHC.root";
     
+    // files for prod7E
+    TString path_to_data_input = "/eos/home-q/qunguyen/highland_3.11_V7E_output/numuCCOuterDetector/data/";
+    // TString input_data_file ="merge_run6_air_RHC.root";
+    TString input_data_file ="merge_run8_water_FHC.root";
+    
+    TString path_to_MC_input = "/eos/home-q/qunguyen/highland_3.11_V7E_output/numuCCOuterDetector/MC/";
+    // TString input_MC_file ="merge_run6air_RH.root";
+    TString input_MC_file ="merge_run8water_FHC.root";
 
     char full_data_file_name[256];
     sprintf(full_data_file_name,"%s%s",path_to_data_input.Data(),input_data_file.Data());
@@ -38,10 +47,16 @@ void ccOuterDetector(){
     TCanvas *c1 = new TCanvas("c1","c1", 800,600);
 
     draw.Draw(data, mc, "HMN_mom", 100, 0, 5000, "particle", " accum_level[0]>3 && "+ selection_sand_muon_cut);//kNumuCCOuterDet[0][0]>6 &&
-    c1->Print("SMRD_pmu_nu.pdf");
+    c1->Print("../plotPDFs/CCOuterdetector/SMRD_pmu_nu_run8water_FHC_V7E.pdf");
+    draw->SetTitleX("Reconstructed p_{#mu}");
+	draw->SetTitleY("Events");
+    draw->SetTitle("title");
 
     // draw.Draw(data, mc, "HMN_costheta", 100, -1, 1, "particle", " accum_level[0]>3");//kNumuCCOuterDet[0][0]>6 &&
     // c1->Print("SMRD_costheta_nu.pdf");
+    draw->SetTitleX("Reconstructed cos#theta_{#mu}");
+	draw->SetTitleY("Events");
+    draw->SetTitle("title");
 /*
     SampleGroup run8("run8");
     run8.AddMCSample("magnet",mc);  
